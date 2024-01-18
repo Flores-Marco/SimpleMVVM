@@ -7,9 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C87E9C3B2B59BD2D0095C424 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87E9C3A2B59BD2D0095C424 /* RegisterViewController.swift */; };
+		C87E9C3D2B59BD400095C424 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87E9C3C2B59BD400095C424 /* SignInViewController.swift */; };
+		C87E9C3F2B59BD510095C424 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87E9C3E2B59BD510095C424 /* HomeViewController.swift */; };
+		C87E9C422B59BF010095C424 /* SegueConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87E9C412B59BF010095C424 /* SegueConstants.swift */; };
+		C87E9C442B59BF150095C424 /* RegexConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87E9C432B59BF150095C424 /* RegexConstants.swift */; };
+		C87E9C482B59C20D0095C424 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87E9C472B59C20D0095C424 /* CustomButton.swift */; };
+		C87E9C4C2B59C3B80095C424 /* CustomButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = C87E9C4B2B59C3B80095C424 /* CustomButton.xib */; };
+		C87E9C4F2B59E0790095C424 /* RegistrationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87E9C4E2B59E0790095C424 /* RegistrationRequest.swift */; };
 		C88026542B59B686006C12CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88026532B59B686006C12CE /* AppDelegate.swift */; };
 		C88026562B59B686006C12CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88026552B59B686006C12CE /* SceneDelegate.swift */; };
-		C88026582B59B686006C12CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88026572B59B686006C12CE /* ViewController.swift */; };
+		C88026582B59B686006C12CE /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88026572B59B686006C12CE /* WelcomeViewController.swift */; };
 		C880265B2B59B686006C12CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C88026592B59B686006C12CE /* Main.storyboard */; };
 		C880265D2B59B689006C12CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C880265C2B59B689006C12CE /* Assets.xcassets */; };
 		C88026602B59B689006C12CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C880265E2B59B689006C12CE /* LaunchScreen.storyboard */; };
@@ -36,10 +44,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C87E9C3A2B59BD2D0095C424 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		C87E9C3C2B59BD400095C424 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		C87E9C3E2B59BD510095C424 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C87E9C412B59BF010095C424 /* SegueConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueConstants.swift; sourceTree = "<group>"; };
+		C87E9C432B59BF150095C424 /* RegexConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexConstants.swift; sourceTree = "<group>"; };
+		C87E9C472B59C20D0095C424 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		C87E9C4B2B59C3B80095C424 /* CustomButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomButton.xib; sourceTree = "<group>"; };
+		C87E9C4E2B59E0790095C424 /* RegistrationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRequest.swift; sourceTree = "<group>"; };
 		C88026502B59B686006C12CE /* SimpleMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C88026532B59B686006C12CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C88026552B59B686006C12CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C88026572B59B686006C12CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C88026572B59B686006C12CE /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		C880265A2B59B686006C12CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C880265C2B59B689006C12CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C880265F2B59B689006C12CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,6 +92,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C87E9C402B59BECF0095C424 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C87E9C412B59BF010095C424 /* SegueConstants.swift */,
+				C87E9C432B59BF150095C424 /* RegexConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		C87E9C452B59BF470095C424 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C87E9C3A2B59BD2D0095C424 /* RegisterViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C87E9C462B59C0D90095C424 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C88026592B59B686006C12CE /* Main.storyboard */,
+				C880265E2B59B689006C12CE /* LaunchScreen.storyboard */,
+				C87E9C472B59C20D0095C424 /* CustomButton.swift */,
+				C87E9C4B2B59C3B80095C424 /* CustomButton.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C87E9C4D2B59E05B0095C424 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C87E9C4E2B59E0790095C424 /* RegistrationRequest.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C88026472B59B686006C12CE = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +151,17 @@
 		C88026522B59B686006C12CE /* SimpleMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				C87E9C4D2B59E05B0095C424 /* Model */,
+				C87E9C462B59C0D90095C424 /* View */,
+				C87E9C452B59BF470095C424 /* Controllers */,
+				C87E9C402B59BECF0095C424 /* Constants */,
 				C88026532B59B686006C12CE /* AppDelegate.swift */,
 				C88026552B59B686006C12CE /* SceneDelegate.swift */,
-				C88026572B59B686006C12CE /* ViewController.swift */,
-				C88026592B59B686006C12CE /* Main.storyboard */,
+				C88026572B59B686006C12CE /* WelcomeViewController.swift */,
 				C880265C2B59B689006C12CE /* Assets.xcassets */,
-				C880265E2B59B689006C12CE /* LaunchScreen.storyboard */,
 				C88026612B59B689006C12CE /* Info.plist */,
+				C87E9C3C2B59BD400095C424 /* SignInViewController.swift */,
+				C87E9C3E2B59BD510095C424 /* HomeViewController.swift */,
 			);
 			path = SimpleMVVM;
 			sourceTree = "<group>";
@@ -231,6 +287,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C87E9C4C2B59C3B80095C424 /* CustomButton.xib in Resources */,
 				C88026602B59B689006C12CE /* LaunchScreen.storyboard in Resources */,
 				C880265D2B59B689006C12CE /* Assets.xcassets in Resources */,
 				C880265B2B59B686006C12CE /* Main.storyboard in Resources */,
@@ -258,9 +315,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C88026582B59B686006C12CE /* ViewController.swift in Sources */,
+				C87E9C422B59BF010095C424 /* SegueConstants.swift in Sources */,
+				C88026582B59B686006C12CE /* WelcomeViewController.swift in Sources */,
+				C87E9C4F2B59E0790095C424 /* RegistrationRequest.swift in Sources */,
+				C87E9C482B59C20D0095C424 /* CustomButton.swift in Sources */,
 				C88026542B59B686006C12CE /* AppDelegate.swift in Sources */,
 				C88026562B59B686006C12CE /* SceneDelegate.swift in Sources */,
+				C87E9C3D2B59BD400095C424 /* SignInViewController.swift in Sources */,
+				C87E9C3B2B59BD2D0095C424 /* RegisterViewController.swift in Sources */,
+				C87E9C3F2B59BD510095C424 /* HomeViewController.swift in Sources */,
+				C87E9C442B59BF150095C424 /* RegexConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
