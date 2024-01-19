@@ -3,7 +3,6 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -56,6 +55,7 @@
                     <connections>
                         <segue destination="6rk-BX-ocn" kind="show" identifier="signIn" id="q43-7T-jCH"/>
                         <segue destination="Oqk-I4-LkW" kind="show" identifier="register" id="g4q-RR-uAq"/>
+                        <segue destination="Pwd-3v-YM8" kind="show" identifier="WelcomeToHome" id="gAo-8K-h8X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -73,12 +73,12 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="teR-Zf-Kob">
                                 <rect key="frame" x="96.666666666666686" y="321" width="200" height="210"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Please Enter Your Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g3P-EX-4tC">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please Enter Your Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g3P-EX-4tC">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Please Enter Your Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="15M-il-7Mu">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please Enter Your Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="15M-il-7Mu">
                                         <rect key="frame" x="0.0" y="80" width="200" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -87,6 +87,9 @@
                                         <rect key="frame" x="0.0" y="160" width="200" height="50"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Sign In"/>
+                                        <connections>
+                                            <action selector="signInButtonPressed:" destination="6rk-BX-ocn" eventType="touchUpInside" id="7Um-YQ-1FC"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -104,6 +107,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Sign In" id="a5Y-tr-gR6"/>
                     <connections>
+                        <outlet property="button" destination="UlS-nT-Uu8" id="k4K-Zl-a9v"/>
+                        <outlet property="emailTextField" destination="g3P-EX-4tC" id="J4O-p9-JC6"/>
+                        <outlet property="passwordTextField" destination="15M-il-7Mu" id="yWS-SJ-VYB"/>
                         <segue destination="Pwd-3v-YM8" kind="show" identifier="SignInToHome" id="XB6-oJ-PcE"/>
                     </connections>
                 </viewController>
@@ -140,20 +146,23 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="8Az-1f-G3M">
                                 <rect key="frame" x="96.666666666666686" y="127" width="200" height="210"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Please Enter an Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sFg-FH-AP6">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="maflores@intekglobal.com" borderStyle="roundedRect" placeholder="Please Enter an Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sFg-FH-AP6">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Please Enter a Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lNJ-tP-5fb">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="LPmafp1998" borderStyle="roundedRect" placeholder="Please Enter a Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lNJ-tP-5fb">
                                         <rect key="frame" x="0.0" y="80" width="200" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZi-03-8GV" customClass="CustomButton" customModule="SimpleMVVM" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="160" width="200" height="50"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Register"/>
+                                        <connections>
+                                            <action selector="registerButtonPressed:" destination="Oqk-I4-LkW" eventType="touchUpInside" id="jCa-EZ-1mQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -171,6 +180,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Register" id="zbl-L4-74r"/>
                     <connections>
+                        <outlet property="button" destination="OZi-03-8GV" id="zdp-39-Ntx"/>
+                        <outlet property="emailTextField" destination="sFg-FH-AP6" id="tbD-as-hBN"/>
+                        <outlet property="passwordTextField" destination="lNJ-tP-5fb" id="R6d-Db-mcd"/>
                         <segue destination="Pwd-3v-YM8" kind="show" identifier="RegisterToHome" id="Rr9-dP-JkU"/>
                     </connections>
                 </viewController>
@@ -185,10 +197,25 @@
                     <view key="view" contentMode="scaleToFill" id="Qlj-ea-R8l">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGT-ER-M0q" customClass="CustomButton" customModule="SimpleMVVM" customModuleProvider="target">
+                                <rect key="frame" x="261" y="152" width="106" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <buttonConfiguration key="configuration" style="filled" image="arrow.uturn.left" catalog="system" title="Sign Out " titleAlignment="automatic">
+                                    <directionalEdgeInsets key="contentInsets" top="5" leading="5" bottom="5" trailing="5"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="signOutButtonPressed:" destination="Pwd-3v-YM8" eventType="touchUpInside" id="6uW-OC-sm1"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="CGg-SZ-Ytu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="5QA-Bk-iHM"/>
+                    <navigationItem key="navigationItem" title="Home" id="5QA-Bk-iHM"/>
+                    <connections>
+                        <outlet property="signOutButton" destination="XGT-ER-M0q" id="IlH-BQ-zKK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rUn-pp-YZt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -196,9 +223,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="XB6-oJ-PcE"/>
+        <segue reference="Rr9-dP-JkU"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="arrow.uturn.left" catalog="system" width="128" height="113"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -15,6 +15,9 @@
 		C87E9C482B59C20D0095C424 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87E9C472B59C20D0095C424 /* CustomButton.swift */; };
 		C87E9C4C2B59C3B80095C424 /* CustomButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = C87E9C4B2B59C3B80095C424 /* CustomButton.xib */; };
 		C87E9C4F2B59E0790095C424 /* RegistrationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87E9C4E2B59E0790095C424 /* RegistrationRequest.swift */; };
+		C87E9C522B59E72E0095C424 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87E9C512B59E72E0095C424 /* Extension+String.swift */; };
+		C87E9C542B59EEDF0095C424 /* Extension+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87E9C532B59EEDF0095C424 /* Extension+Alert.swift */; };
+		C87E9C562B59F7CA0095C424 /* ButtonStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87E9C552B59F7CA0095C424 /* ButtonStateProtocol.swift */; };
 		C88026542B59B686006C12CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88026532B59B686006C12CE /* AppDelegate.swift */; };
 		C88026562B59B686006C12CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88026552B59B686006C12CE /* SceneDelegate.swift */; };
 		C88026582B59B686006C12CE /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88026572B59B686006C12CE /* WelcomeViewController.swift */; };
@@ -52,6 +55,9 @@
 		C87E9C472B59C20D0095C424 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		C87E9C4B2B59C3B80095C424 /* CustomButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomButton.xib; sourceTree = "<group>"; };
 		C87E9C4E2B59E0790095C424 /* RegistrationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRequest.swift; sourceTree = "<group>"; };
+		C87E9C512B59E72E0095C424 /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
+		C87E9C532B59EEDF0095C424 /* Extension+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Alert.swift"; sourceTree = "<group>"; };
+		C87E9C552B59F7CA0095C424 /* ButtonStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStateProtocol.swift; sourceTree = "<group>"; };
 		C88026502B59B686006C12CE /* SimpleMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C88026532B59B686006C12CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C88026552B59B686006C12CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +134,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		C87E9C502B59E71E0095C424 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C87E9C512B59E72E0095C424 /* Extension+String.swift */,
+				C87E9C532B59EEDF0095C424 /* Extension+Alert.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C88026472B59B686006C12CE = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +166,7 @@
 		C88026522B59B686006C12CE /* SimpleMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				C87E9C502B59E71E0095C424 /* Extensions */,
 				C87E9C4D2B59E05B0095C424 /* Model */,
 				C87E9C462B59C0D90095C424 /* View */,
 				C87E9C452B59BF470095C424 /* Controllers */,
@@ -162,6 +178,7 @@
 				C88026612B59B689006C12CE /* Info.plist */,
 				C87E9C3C2B59BD400095C424 /* SignInViewController.swift */,
 				C87E9C3E2B59BD510095C424 /* HomeViewController.swift */,
+				C87E9C552B59F7CA0095C424 /* ButtonStateProtocol.swift */,
 			);
 			path = SimpleMVVM;
 			sourceTree = "<group>";
@@ -315,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C87E9C542B59EEDF0095C424 /* Extension+Alert.swift in Sources */,
 				C87E9C422B59BF010095C424 /* SegueConstants.swift in Sources */,
 				C88026582B59B686006C12CE /* WelcomeViewController.swift in Sources */,
 				C87E9C4F2B59E0790095C424 /* RegistrationRequest.swift in Sources */,
@@ -322,8 +340,10 @@
 				C88026542B59B686006C12CE /* AppDelegate.swift in Sources */,
 				C88026562B59B686006C12CE /* SceneDelegate.swift in Sources */,
 				C87E9C3D2B59BD400095C424 /* SignInViewController.swift in Sources */,
+				C87E9C522B59E72E0095C424 /* Extension+String.swift in Sources */,
 				C87E9C3B2B59BD2D0095C424 /* RegisterViewController.swift in Sources */,
 				C87E9C3F2B59BD510095C424 /* HomeViewController.swift in Sources */,
+				C87E9C562B59F7CA0095C424 /* ButtonStateProtocol.swift in Sources */,
 				C87E9C442B59BF150095C424 /* RegexConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

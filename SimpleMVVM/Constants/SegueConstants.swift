@@ -12,4 +12,5 @@ enum Identifiers: String {
     case signIn = "signIn"
     case registerToHome = "RegisterToHome"
     case signInToHome = "SignInToHome"
+    case welcomeToHome = "WelcomeToHome"
 }

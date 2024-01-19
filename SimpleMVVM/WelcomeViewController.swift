@@ -14,12 +14,18 @@ class WelcomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //self.performSegue(withIdentifier: Identifiers.welcomeToHome.rawValue, sender: self)
+    }
+    
     @IBAction func registerButtonPressed(_ sender: UIButton) {
-        self.performSegue(withIdentifier: Identifiers.register, sender: self)
+        self.performSegue(withIdentifier: Identifiers.register.rawValue, sender: self)
     }
     
     @IBAction func signInButtonPressed(_ sender: UIButton) {
-        self.performSegue(withIdentifier: Identifiers.signIn, sender: self)
+        self.performSegue(withIdentifier: Identifiers.signIn.rawValue, sender: self)
     }
 }
 
