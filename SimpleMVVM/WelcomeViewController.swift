@@ -8,7 +8,6 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -16,8 +15,9 @@ class WelcomeViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        //self.performSegue(withIdentifier: Identifiers.welcomeToHome.rawValue, sender: self)
+        if let _ = SessionManager.getLoggedInUser() {
+            self.performSegue(withIdentifier: Identifiers.welcomeToHome.rawValue, sender: self)
+        }
     }
     
     @IBAction func registerButtonPressed(_ sender: UIButton) {

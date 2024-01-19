@@ -151,10 +151,10 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="LPmafp1998" borderStyle="roundedRect" placeholder="Please Enter a Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lNJ-tP-5fb">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ab1" borderStyle="roundedRect" placeholder="Please Enter a Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lNJ-tP-5fb">
                                         <rect key="frame" x="0.0" y="80" width="200" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZi-03-8GV" customClass="CustomButton" customModule="SimpleMVVM" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="160" width="200" height="50"/>
@@ -199,7 +199,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGT-ER-M0q" customClass="CustomButton" customModule="SimpleMVVM" customModuleProvider="target">
-                                <rect key="frame" x="261" y="152" width="106" height="31"/>
+                                <rect key="frame" x="271" y="132" width="106" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <buttonConfiguration key="configuration" style="filled" image="arrow.uturn.left" catalog="system" title="Sign Out " titleAlignment="automatic">
                                     <directionalEdgeInsets key="contentInsets" top="5" leading="5" bottom="5" trailing="5"/>
@@ -208,12 +208,20 @@
                                     <action selector="signOutButtonPressed:" destination="Pwd-3v-YM8" eventType="touchUpInside" id="6uW-OC-sm1"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWg-h6-oC0">
+                                <rect key="frame" x="96" y="179" width="200" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CGg-SZ-Ytu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="5QA-Bk-iHM"/>
                     <connections>
+                        <outlet property="emailLabel" destination="gWg-h6-oC0" id="L0b-nR-Xe8"/>
                         <outlet property="signOutButton" destination="XGT-ER-M0q" id="IlH-BQ-zKK"/>
                     </connections>
                 </viewController>

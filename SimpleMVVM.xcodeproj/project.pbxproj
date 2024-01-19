@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C85D78222B5AF1E300075128 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85D78212B5AF1E300075128 /* RegistrationViewModel.swift */; };
 		C87E9C3B2B59BD2D0095C424 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87E9C3A2B59BD2D0095C424 /* RegisterViewController.swift */; };
 		C87E9C3D2B59BD400095C424 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87E9C3C2B59BD400095C424 /* SignInViewController.swift */; };
 		C87E9C3F2B59BD510095C424 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87E9C3E2B59BD510095C424 /* HomeViewController.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C85D78212B5AF1E300075128 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		C87E9C3A2B59BD2D0095C424 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		C87E9C3C2B59BD400095C424 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		C87E9C3E2B59BD510095C424 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C82179FC2B5AF21E009501F2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C85D78212B5AF1E300075128 /* RegistrationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		C87E9C402B59BECF0095C424 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +176,7 @@
 		C88026522B59B686006C12CE /* SimpleMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				C82179FC2B5AF21E009501F2 /* ViewModel */,
 				C87E9C502B59E71E0095C424 /* Extensions */,
 				C87E9C4D2B59E05B0095C424 /* Model */,
 				C87E9C462B59C0D90095C424 /* View */,
@@ -335,6 +346,7 @@
 				C87E9C542B59EEDF0095C424 /* Extension+Alert.swift in Sources */,
 				C87E9C422B59BF010095C424 /* SegueConstants.swift in Sources */,
 				C88026582B59B686006C12CE /* WelcomeViewController.swift in Sources */,
+				C85D78222B5AF1E300075128 /* RegistrationViewModel.swift in Sources */,
 				C87E9C4F2B59E0790095C424 /* RegistrationRequest.swift in Sources */,
 				C87E9C482B59C20D0095C424 /* CustomButton.swift in Sources */,
 				C88026542B59B686006C12CE /* AppDelegate.swift in Sources */,

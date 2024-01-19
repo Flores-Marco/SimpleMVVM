@@ -12,4 +12,8 @@ extension String {
         let emailPredicate = NSPredicate(format: "SELF MATCHES %@", regex)
         return emailPredicate.evaluate(with: self.trimmingCharacters(in: .whitespaces))
     }
+    
+    var hashed: String {
+        return String(self.hashValue)
+    }
 }

@@ -37,7 +37,10 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func signInButtonPressed(_ sender: UIButton) {
-        self.performSegue(withIdentifier: Identifiers.signInToHome.rawValue, sender: self)
+        if RegistrationViewModel.userExists(email: emailTextField.text!, password: passwordTextField.text!) {
+            AccountManager.logInUser(email: emailTextField.text!)
+            self.performSegue(withIdentifier: Identifiers.signInToHome.rawValue, sender: self)
+        }
     }
 
 }
