@@ -7,62 +7,61 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController, FormValidatable {
+class RegisterViewController: UIViewController, FormValidatable, ErrorNotification {
+    // MARK: - Outlets
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var button: UIButton!
-    
+    @IBOutlet weak var errorLabel: UILabel!
+
+    // MARK: - ViewController Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         assignSelf()
-        updateButtonState()
+        button.isEnabled = false
         emailTextField.addTarget(self, action: #selector(updateButtonState), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(updateButtonState), for: .editingChanged)
     }
     
+    //MARK: - Specific Protocol Functions
     @objc func updateButtonState() {
         let email = emailTextField.text ?? ""
         let password = passwordTextField.text ?? ""
+        let passwordConfirmation = confirmPasswordTextField.text ?? ""
         
-        let emailRegex = "\(Regex.name)@\(Regex.server).\(Regex.doamin)"
+        let isError = errorExists(email: email, password: password, confirmationPassword: passwordConfirmation)
         
-        let notEmpty = !email.isEmpty && !password.isEmpty
-        let isValid = email.isValid(regex: emailRegex) && password.isValid(regex: Regex.password)
-        let isEnabled = notEmpty && isValid
-        
-        button.isEnabled = isEnabled
-        button.alpha = isEnabled ? 1 : 0.7
+        button.isEnabled = !isError
     }
     
+    //MARK: - IBActions
     @IBAction func registerButtonPressed(_ sender: UIButton) {
-        RegistrationViewModel.registerUser(email: emailTextField.text!, password: passwordTextField.text!)
-        AccountManager.logInUser(email: emailTextField.text!)
+        let email = emailTextField.text!
+        let password = passwordTextField.text!
         
-        self.performSegue(withIdentifier: Identifiers.registerToHome.rawValue, sender: self)
+        let alreadyExists = RegistrationViewModel.userExists(email: email, password: password)
+        if alreadyExists {
+            showInfo(error: .userAlreadyExists)
+            button.isEnabled = false
+        } else {
+            RegistrationViewModel.registerUser(email: email, password: password)
+            AccountManager.logInUser(email: email)
+            self.performSegue(withIdentifier: Identifiers.registerToHome.rawValue, sender: self)
+        }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
+//MARK: - UITextFieldDelegate Extension
 extension RegisterViewController: UITextFieldDelegate {
     func assignSelf() {
         self.emailTextField.delegate = self
         self.passwordTextField.delegate = self
+        self.confirmPasswordTextField.delegate = self
     }
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
         updateButtonState()
     }
-
 }
-

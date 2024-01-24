@@ -21,13 +21,18 @@ class RegistrationViewModel {
     
     static func userExists(email: String, password: String) -> Bool {
         if let userDict = UserDefaults.standard.dictionary(forKey: email) as? [String: String] {
-            return userDict["password"] == password
+            return true
         }
         return false
     }
 }
 
 class AccountManager {
+    static func isCorrectPassword(email: String, password: String) -> Bool {
+        let userDict = UserDefaults.standard.dictionary(forKey: email) as! [String: String]
+        return userDict["password"] == password
+    }
+    
     static func logInUser(email: String) {
         UserDefaults.standard.set(email, forKey: LoggedKeys.loggedIn)
     }

@@ -18,7 +18,9 @@
 		C87E9C4F2B59E0790095C424 /* RegistrationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87E9C4E2B59E0790095C424 /* RegistrationRequest.swift */; };
 		C87E9C522B59E72E0095C424 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87E9C512B59E72E0095C424 /* Extension+String.swift */; };
 		C87E9C542B59EEDF0095C424 /* Extension+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87E9C532B59EEDF0095C424 /* Extension+Alert.swift */; };
-		C87E9C562B59F7CA0095C424 /* ButtonStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87E9C552B59F7CA0095C424 /* ButtonStateProtocol.swift */; };
+		C87E9C562B59F7CA0095C424 /* FormValidatableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87E9C552B59F7CA0095C424 /* FormValidatableProtocol.swift */; };
+		C88016082B605D4E00CBCBE1 /* ErrorNotificationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88016072B605D4E00CBCBE1 /* ErrorNotificationProtocol.swift */; };
+		C880160A2B605DCB00CBCBE1 /* ErrorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88016092B605DCB00CBCBE1 /* ErrorConstants.swift */; };
 		C88026542B59B686006C12CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88026532B59B686006C12CE /* AppDelegate.swift */; };
 		C88026562B59B686006C12CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88026552B59B686006C12CE /* SceneDelegate.swift */; };
 		C88026582B59B686006C12CE /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88026572B59B686006C12CE /* WelcomeViewController.swift */; };
@@ -59,7 +61,9 @@
 		C87E9C4E2B59E0790095C424 /* RegistrationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRequest.swift; sourceTree = "<group>"; };
 		C87E9C512B59E72E0095C424 /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
 		C87E9C532B59EEDF0095C424 /* Extension+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Alert.swift"; sourceTree = "<group>"; };
-		C87E9C552B59F7CA0095C424 /* ButtonStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStateProtocol.swift; sourceTree = "<group>"; };
+		C87E9C552B59F7CA0095C424 /* FormValidatableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormValidatableProtocol.swift; sourceTree = "<group>"; };
+		C88016072B605D4E00CBCBE1 /* ErrorNotificationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorNotificationProtocol.swift; sourceTree = "<group>"; };
+		C88016092B605DCB00CBCBE1 /* ErrorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorConstants.swift; sourceTree = "<group>"; };
 		C88026502B59B686006C12CE /* SimpleMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C88026532B59B686006C12CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C88026552B59B686006C12CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 			children = (
 				C87E9C412B59BF010095C424 /* SegueConstants.swift */,
 				C87E9C432B59BF150095C424 /* RegexConstants.swift */,
+				C88016092B605DCB00CBCBE1 /* ErrorConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -153,6 +158,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		C88016062B60578600CBCBE1 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C87E9C552B59F7CA0095C424 /* FormValidatableProtocol.swift */,
+				C88016072B605D4E00CBCBE1 /* ErrorNotificationProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		C88026472B59B686006C12CE = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +190,10 @@
 		C88026522B59B686006C12CE /* SimpleMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				C87E9C3C2B59BD400095C424 /* SignInViewController.swift */,
+				C87E9C3E2B59BD510095C424 /* HomeViewController.swift */,
+				C88026572B59B686006C12CE /* WelcomeViewController.swift */,
+				C88016062B60578600CBCBE1 /* Protocols */,
 				C82179FC2B5AF21E009501F2 /* ViewModel */,
 				C87E9C502B59E71E0095C424 /* Extensions */,
 				C87E9C4D2B59E05B0095C424 /* Model */,
@@ -184,12 +202,8 @@
 				C87E9C402B59BECF0095C424 /* Constants */,
 				C88026532B59B686006C12CE /* AppDelegate.swift */,
 				C88026552B59B686006C12CE /* SceneDelegate.swift */,
-				C88026572B59B686006C12CE /* WelcomeViewController.swift */,
 				C880265C2B59B689006C12CE /* Assets.xcassets */,
 				C88026612B59B689006C12CE /* Info.plist */,
-				C87E9C3C2B59BD400095C424 /* SignInViewController.swift */,
-				C87E9C3E2B59BD510095C424 /* HomeViewController.swift */,
-				C87E9C552B59F7CA0095C424 /* ButtonStateProtocol.swift */,
 			);
 			path = SimpleMVVM;
 			sourceTree = "<group>";
@@ -349,13 +363,15 @@
 				C85D78222B5AF1E300075128 /* RegistrationViewModel.swift in Sources */,
 				C87E9C4F2B59E0790095C424 /* RegistrationRequest.swift in Sources */,
 				C87E9C482B59C20D0095C424 /* CustomButton.swift in Sources */,
+				C880160A2B605DCB00CBCBE1 /* ErrorConstants.swift in Sources */,
 				C88026542B59B686006C12CE /* AppDelegate.swift in Sources */,
 				C88026562B59B686006C12CE /* SceneDelegate.swift in Sources */,
 				C87E9C3D2B59BD400095C424 /* SignInViewController.swift in Sources */,
 				C87E9C522B59E72E0095C424 /* Extension+String.swift in Sources */,
 				C87E9C3B2B59BD2D0095C424 /* RegisterViewController.swift in Sources */,
 				C87E9C3F2B59BD510095C424 /* HomeViewController.swift in Sources */,
-				C87E9C562B59F7CA0095C424 /* ButtonStateProtocol.swift in Sources */,
+				C88016082B605D4E00CBCBE1 /* ErrorNotificationProtocol.swift in Sources */,
+				C87E9C562B59F7CA0095C424 /* FormValidatableProtocol.swift in Sources */,
 				C87E9C442B59BF150095C424 /* RegexConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

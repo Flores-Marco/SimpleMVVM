@@ -9,8 +9,8 @@ import Foundation
 
 extension String {
     func isValid(regex: String) -> Bool {
-        let emailPredicate = NSPredicate(format: "SELF MATCHES %@", regex)
-        return emailPredicate.evaluate(with: self.trimmingCharacters(in: .whitespaces))
+        let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
+        return predicate.evaluate(with: self.trimmingCharacters(in: .whitespaces)) && !self.isEmpty
     }
     
     var hashed: String {
