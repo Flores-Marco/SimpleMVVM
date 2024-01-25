@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C8249E7F2B61C9B600D6E794 /* SignInViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8249E7E2B61C9B600D6E794 /* SignInViewControllerTests.swift */; };
+		C8249E822B61CE5000D6E794 /* MockUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8249E812B61CE5000D6E794 /* MockUserDefaults.swift */; };
+		C8249E842B61CE8000D6E794 /* MockRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8249E832B61CE8000D6E794 /* MockRegistrationViewController.swift */; };
+		C8249E862B61CEB700D6E794 /* MockSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8249E852B61CEB700D6E794 /* MockSignInViewController.swift */; };
+		C8249E882B61CEF000D6E794 /* MockAccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8249E872B61CEF000D6E794 /* MockAccountManager.swift */; };
+		C8249E8A2B61CEFD00D6E794 /* MockRegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8249E892B61CEFD00D6E794 /* MockRegistrationViewModel.swift */; };
 		C85D78222B5AF1E300075128 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85D78212B5AF1E300075128 /* RegistrationViewModel.swift */; };
 		C87E9C3B2B59BD2D0095C424 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87E9C3A2B59BD2D0095C424 /* RegisterViewController.swift */; };
 		C87E9C3D2B59BD400095C424 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87E9C3C2B59BD400095C424 /* SignInViewController.swift */; };
@@ -27,7 +33,7 @@
 		C880265B2B59B686006C12CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C88026592B59B686006C12CE /* Main.storyboard */; };
 		C880265D2B59B689006C12CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C880265C2B59B689006C12CE /* Assets.xcassets */; };
 		C88026602B59B689006C12CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C880265E2B59B689006C12CE /* LaunchScreen.storyboard */; };
-		C880266B2B59B68A006C12CE /* SimpleMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C880266A2B59B68A006C12CE /* SimpleMVVMTests.swift */; };
+		C880266B2B59B68A006C12CE /* RegisterViewControllerUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C880266A2B59B68A006C12CE /* RegisterViewControllerUnitTests.swift */; };
 		C88026752B59B68A006C12CE /* SimpleMVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88026742B59B68A006C12CE /* SimpleMVVMUITests.swift */; };
 		C88026772B59B68A006C12CE /* SimpleMVVMUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88026762B59B68A006C12CE /* SimpleMVVMUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
@@ -50,6 +56,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C8249E7E2B61C9B600D6E794 /* SignInViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewControllerTests.swift; sourceTree = "<group>"; };
+		C8249E812B61CE5000D6E794 /* MockUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDefaults.swift; sourceTree = "<group>"; };
+		C8249E832B61CE8000D6E794 /* MockRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRegistrationViewController.swift; sourceTree = "<group>"; };
+		C8249E852B61CEB700D6E794 /* MockSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSignInViewController.swift; sourceTree = "<group>"; };
+		C8249E872B61CEF000D6E794 /* MockAccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAccountManager.swift; sourceTree = "<group>"; };
+		C8249E892B61CEFD00D6E794 /* MockRegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRegistrationViewModel.swift; sourceTree = "<group>"; };
 		C85D78212B5AF1E300075128 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		C87E9C3A2B59BD2D0095C424 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		C87E9C3C2B59BD400095C424 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -73,7 +85,7 @@
 		C880265F2B59B689006C12CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C88026612B59B689006C12CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C88026662B59B68A006C12CE /* SimpleMVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleMVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C880266A2B59B68A006C12CE /* SimpleMVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleMVVMTests.swift; sourceTree = "<group>"; };
+		C880266A2B59B68A006C12CE /* RegisterViewControllerUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewControllerUnitTests.swift; sourceTree = "<group>"; };
 		C88026702B59B68A006C12CE /* SimpleMVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleMVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C88026742B59B68A006C12CE /* SimpleMVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleMVVMUITests.swift; sourceTree = "<group>"; };
 		C88026762B59B68A006C12CE /* SimpleMVVMUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleMVVMUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -110,6 +122,18 @@
 				C85D78212B5AF1E300075128 /* RegistrationViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C8249E802B61CE3500D6E794 /* MockServices */ = {
+			isa = PBXGroup;
+			children = (
+				C8249E812B61CE5000D6E794 /* MockUserDefaults.swift */,
+				C8249E832B61CE8000D6E794 /* MockRegistrationViewController.swift */,
+				C8249E852B61CEB700D6E794 /* MockSignInViewController.swift */,
+				C8249E872B61CEF000D6E794 /* MockAccountManager.swift */,
+				C8249E892B61CEFD00D6E794 /* MockRegistrationViewModel.swift */,
+			);
+			path = MockServices;
 			sourceTree = "<group>";
 		};
 		C87E9C402B59BECF0095C424 /* Constants */ = {
@@ -190,6 +214,7 @@
 		C88026522B59B686006C12CE /* SimpleMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				C8249E802B61CE3500D6E794 /* MockServices */,
 				C87E9C3C2B59BD400095C424 /* SignInViewController.swift */,
 				C87E9C3E2B59BD510095C424 /* HomeViewController.swift */,
 				C88026572B59B686006C12CE /* WelcomeViewController.swift */,
@@ -211,7 +236,8 @@
 		C88026692B59B68A006C12CE /* SimpleMVVMTests */ = {
 			isa = PBXGroup;
 			children = (
-				C880266A2B59B68A006C12CE /* SimpleMVVMTests.swift */,
+				C880266A2B59B68A006C12CE /* RegisterViewControllerUnitTests.swift */,
+				C8249E7E2B61C9B600D6E794 /* SignInViewControllerTests.swift */,
 			);
 			path = SimpleMVVMTests;
 			sourceTree = "<group>";
@@ -358,17 +384,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				C87E9C542B59EEDF0095C424 /* Extension+Alert.swift in Sources */,
+				C8249E882B61CEF000D6E794 /* MockAccountManager.swift in Sources */,
+				C8249E842B61CE8000D6E794 /* MockRegistrationViewController.swift in Sources */,
 				C87E9C422B59BF010095C424 /* SegueConstants.swift in Sources */,
 				C88026582B59B686006C12CE /* WelcomeViewController.swift in Sources */,
 				C85D78222B5AF1E300075128 /* RegistrationViewModel.swift in Sources */,
 				C87E9C4F2B59E0790095C424 /* RegistrationRequest.swift in Sources */,
+				C8249E8A2B61CEFD00D6E794 /* MockRegistrationViewModel.swift in Sources */,
 				C87E9C482B59C20D0095C424 /* CustomButton.swift in Sources */,
 				C880160A2B605DCB00CBCBE1 /* ErrorConstants.swift in Sources */,
 				C88026542B59B686006C12CE /* AppDelegate.swift in Sources */,
 				C88026562B59B686006C12CE /* SceneDelegate.swift in Sources */,
 				C87E9C3D2B59BD400095C424 /* SignInViewController.swift in Sources */,
+				C8249E822B61CE5000D6E794 /* MockUserDefaults.swift in Sources */,
 				C87E9C522B59E72E0095C424 /* Extension+String.swift in Sources */,
 				C87E9C3B2B59BD2D0095C424 /* RegisterViewController.swift in Sources */,
+				C8249E862B61CEB700D6E794 /* MockSignInViewController.swift in Sources */,
 				C87E9C3F2B59BD510095C424 /* HomeViewController.swift in Sources */,
 				C88016082B605D4E00CBCBE1 /* ErrorNotificationProtocol.swift in Sources */,
 				C87E9C562B59F7CA0095C424 /* FormValidatableProtocol.swift in Sources */,
@@ -380,7 +411,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C880266B2B59B68A006C12CE /* SimpleMVVMTests.swift in Sources */,
+				C8249E7F2B61C9B600D6E794 /* SignInViewControllerTests.swift in Sources */,
+				C880266B2B59B68A006C12CE /* RegisterViewControllerUnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
